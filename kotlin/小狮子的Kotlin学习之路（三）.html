@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>README</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+<title>小狮子的Kotlin学习之路（三）</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
 iframe { margin: auto; }
@@ -149,6 +149,79 @@ iframe { max-width: 100%; width: 100%; border: none; }
 .highlight td, .highlight tr { border: 0px; }
 
 
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
 :root { --side-bar-bg-color: #fafafa; --control-text-color: #777; }
 html { font-size: 16px; }
 body { font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); line-height: 1.6; }
@@ -225,6 +298,6 @@ header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Aria
 </style>
 </head>
 <body class='typora-export os-windows' >
-<div  id='write'  class = 'is-node'><h1><a name="嗨大家好欢迎来到小狮子的世界" class="md-header-anchor"></a><span>嗨，大家好，欢迎来到小狮子的世界~~</span></h1><p><span>这里是一些生活的轨迹和学习中的笔记</span></p><p><span>虽然我是一头懒懒的小狮子，但是偶尔也心血来潮，写一点东西来充实一下自己。</span></p><p><span>当然咯，内容也许不是那么精彩，但是也算是很认真的啦~~</span></p><p><span>其实呢，之前也有写一些东西，但是都是零零散散的，也没有心思发出来啦。</span></p><p><span>之前呢，也有自己的个人网站，但是因为工作原因一直没时间维护，就给关闭了啦。</span></p><p><span>这里上线的第一个内容，将是《小狮子的Kotlin学习之路》系列的内容。</span></p><p><span>因为懒，可能更新不太及时，每周能更新两篇就很不错啦。</span></p><p><span>文采不好，不过也算一个总结。</span></p><p><span>如果哪里写的不对呢，还希望大家能够指正，小狮子一定虚心接受大家的批评教育。</span></p><p><span>有什么想和小狮子交流的呢，也欢迎添加QQ772134112互相学习，小狮子一定知无不言言无不尽，小狮子才疏学浅，前提当然是要“知”啦。</span></p><p><p align="right"><a href='./kotlin/小狮子的Kotlin学习之路（一）.html'><span>小狮子的Kotlin系列</span></a></p></p></div>
+<div  id='write'  class = 'is-node'><h1><a name="小狮子的kotlin学习之路三）" class="md-header-anchor"></a><span>小狮子的Kotlin学习之路（三）</span></h1><h2><a name="初识kotlin之hello-world" class="md-header-anchor"></a><span>初识Kotlin之Hello World</span></h2><p><span>上一篇，我们结束于项目创建，本篇我们将从项目创建开始。</span></p><p><img src="D:\Projects\Kotlin教程\插图\project_create.png" referrerpolicy="no-referrer" alt="project_create"></p><p><span>点击&quot;Create New Project&quot;创建一个新的项目。</span></p><p><span>打开项目创建界面</span></p><p><img src="D:\Projects\Kotlin教程\插图\Create_project_kotlin.png" referrerpolicy="no-referrer" alt="Create_project_kotlin"></p><p><span>我们在左侧选择Kotlin，在右侧显示的项目类型中选择“JVM|IDEA”，点击“Next”。</span></p><p><span>在接下来的界面，我们需要输入项目名称及项目保存路径。</span></p><p><img src="D:\Projects\Kotlin教程\插图\new_project_hello.png" referrerpolicy="no-referrer" alt="new_project_hello"></p><p><span>输入项目名称并选择项目保存路径，其他的项保持默认即可。点击“Finish”，完成项目的创建。</span></p><p><span>项目创建完毕，我们看到的是左侧的项目结构图，以及右侧的编辑框，当然了，编辑框因为我们没有创建可编辑文件，IDEA显示了最常用的快捷操作方式。</span></p><p><img src="D:\Projects\Kotlin教程\插图\project_created.png" referrerpolicy="no-referrer" alt="project_created"></p><p><span>接下来，我们创建一个文件，&quot;src&quot;是我们程序文件存放路径，在&quot;src&quot;文件夹上点击鼠标右键，选择&quot;New -&gt; Kotlin File/Class&quot;。</span></p><p><img src="D:\Projects\Kotlin教程\插图\new_file.png" referrerpolicy="no-referrer" alt="new_file"></p><p><span>在简洁的创建界面中，我们选择创建文件“File&quot;，并输入名称为”HelloWorld&quot;，按“Enter&quot;。</span></p><p><img src="D:\Projects\Kotlin教程\插图\create_file.png" referrerpolicy="no-referrer" alt="create_file"></p><p><span>我们看到右侧编辑器中已经默认展示了我们创建的文件，不过，当前类是一个空的文件，里面只包含了一条声明语句，这个语句称作包声明。</span></p><p><img src="D:\Projects\Kotlin教程\插图\empty_hello_file.png" referrerpolicy="no-referrer" alt="empty_hello_file"></p><p><span>包名package 是可选的，但是在真正做项目的时候，包名就是必须的。</span></p><p><span>接下来，我们来让程序输出一个“Hello World”。</span></p><p><span>Kotlin程序启动入口为一个main方法，我们需要一个main方法，来启动Kotlin程序。我们在编辑框中输入“m”，IDEA就会提示我们main方法提示，如图</span></p><p><img src="D:\Projects\Kotlin教程\插图\file_main_method.png" referrerpolicy="no-referrer" alt="file_main_method"></p><p><span>这时，我们直接按“Enter&quot;键，即可自动生成。</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="kotlin"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="kotlin"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">fun</span> <span class="cm-def">main</span>() {</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 69px;"></div><div class="CodeMirror-gutters" style="display: none; height: 69px;"></div></div></div></pre><p><span>那我们要怎么样才能让程序输出“Hello World”呢？</span></p><p><span>在Kotlin中，我们输出一个字符，使用库函数“print()&quot;即可。如下</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="kotlin"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="kotlin"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">fun</span> <span class="cm-def">main</span>() {</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">print</span>(<span class="cm-string">"Hello World"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 69px;"></div><div class="CodeMirror-gutters" style="display: none; height: 69px;"></div></div></div></pre><p><span>程序已经编写完了，我们要怎么运行它呢。</span></p><p><span>细心的你会发现，&quot;main&quot;方法左侧，有一个绿色的小箭头。</span></p><p><img src="D:\Projects\Kotlin教程\插图\run_hello.png" referrerpolicy="no-referrer" alt="run_hello"></p><p><span>我们点击这个绿色的小箭头，在弹出的菜单上选择“Run Hello World”，即可开始编译运行。</span></p><p><img src="D:\Projects\Kotlin教程\插图\run_main_tip.png" referrerpolicy="no-referrer" alt="run_main_tip"></p><p><span>稍作等待，IDEA会自动弹出&quot;Run&quot;的窗口。在窗口中，我们看到打印出了&quot;Hello World&quot;</span></p><p><img src="D:\Projects\Kotlin教程\插图\run_result_hello.png" referrerpolicy="no-referrer" alt="run_result_hello"></p><p><span>至此，我们Hello World的Kotlin程序，就已经完毕了。</span></p><p><p align="left"><a href='小狮子的Kotlin学习之路（二）.html'><span>上一篇</span></a></p><p align="right"><a href='小狮子的Kotlin学习之路（四）.html'><span>下一篇</span></a></p></p><p>&nbsp;</p></div>
 </body>
 </html>
