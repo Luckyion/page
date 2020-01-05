@@ -2,33 +2,26 @@
 <html lang="en">
 <!-- Head -->
 <head>
-    <title>Home</title>
+    <title>相册</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta name="keywords" content=""/>
-
     <!-- menu -->
     <link type="text/css" rel="stylesheet" href="css/cm-overlay.css"/>
     <!-- //menu -->
     <link href="css/jquery.fatNav.css" rel="stylesheet" type="text/css">
-
-    <!--FlexSlider-->
-    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen"/>
-    <!--//FlexSlider-->
     <!-- custom css theme files -->
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/font-awesome.css"/>
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
     <!-- //custom css theme files -->
-    <link href="css/easy-responsive-tabs.css" rel='stylesheet' type='text/css'/>
-    <link rel="stylesheet" href="css/jquery-ui.css"/><!-- // calendar -->
+    <link rel="stylesheet" href="css/lightbox.css">
     <!-- google fonts -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
           rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese"
           rel="stylesheet">
     <!-- //google fonts -->
-
 </head>
 <!-- Body -->
 <body>
@@ -39,7 +32,7 @@
             <!-- Logo -->
             <div class="logo">
                 <a href="index.html">
-                    ❤❤我们的主页❤❤
+                    ❤❤我们的相册❤❤
                 </a>
             </div>
             <!-- Logo -->
@@ -55,7 +48,7 @@
         <!-- end container -->
     </nav>
 </header>
-<section class="w3l-banner">
+<div class="w3l-banner-1">
     <div class="wthree-dot">
         <!-- nav -->
         <div class="w3layouts-nav-right">
@@ -71,73 +64,79 @@
         </div>
         <!-- //nav -->
         <!-- //Header -->
-        <div class="container">
-            <div class="flexslider-info">
-                <section class="slider">
-                    <div class="flexslider">
-                        <ul class="slides">
-                            <li>
-                                <div class="w3l-info">
-                                    <h1>幸福不是你能左右多少，而是有多少在你左右。</h1>
-                                    <p>有你，就是最幸福的存在</p>
-
-                                </div>
-                            </li>
-                            <li>
-                                <div class="w3l-info">
-                                    <h2>我惯着你，你管着我，这就是我想要的生活。</h2>
-                                    <p>执子之后，与子偕老</p>
-
-                                </div>
-                            </li>
-                            <li>
-                                <div class="w3l-info">
-                                    <h3>人生至少要有两次冲动，一为奋不顾身的爱情，一为说走就走的旅行。</h3>
-                                    <p>每年一个旅行小目标</p>
-
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-            </div>
-        </div>
     </div>
-</section>
+</div>
 <!-- //banner -->
-<!-- promotions -->
-<section class="wthree-row w3-about  py-5">
+<!--gallery-->
+<div class="gallery py-5">
     <div class="container py-md-4 mt-md-3">
-        <h3 class="w3ls-title text-uppercase text-center">向往的目的地</h3>
-        <div class="card-deck mt-md-3 pt-5">
-            <div class="card">
-                <img src="images/hainan_sanya.jpg" class="img-fluid" alt="Card image cap">
-                <div class="card-body w3ls-card">
-                    <h5 class="card-title">海南三亚</h5>
-                    <p class="card-text mb-3 ">记得她说过很多次，想去海南三亚做一次旅行。三月，一个值得纪念的月份，一定要好好计划一番。</p>
-
-                </div>
+        <h3 class="w3ls-title text-uppercase text-center">相册</h3>
+        <div class="row gallery-info mt-md-5 pt-3">
+            <div class="col-md-3 gallery-grids">
+                <a href="images/jiangsu_nanjing.jpg" class="gallery-box" data-lightbox="example-set" data-title="">
+                    <img src="images/jiangsu_nanjing.jpg" alt="" class="img-fluid zoom-img">
+                </a>
             </div>
-            <div class="card">
-                <img src="images/sichuan_jiuzhaigou.jpg" class="img-fluid" alt="Card image cap">
-                <div class="card-body w3ls-card">
-                    <h5 class="card-title">四川九寨沟</h5>
-                    <p class="card-text mb-3 ">九寨沟，一个向往已久的地方。</p>
-
-                </div>
+            <div class="col-md-3 gallery-grids">
+                <a href="images/g2.jpg" class="gallery-box" data-lightbox="example-set" data-title="">
+                    <img src="images/g2.jpg" alt="" class="img-fluid zoom-img">
+                </a>
             </div>
-            <div class="card">
-                <img src="images/jiangsu_nanjing.jpg" class="img-fluid" alt="Card image cap">
-                <div class="card-body w3ls-card">
-                    <h5 class="card-title">江苏南京</h5>
-                    <p class="card-text mb-3 ">南京，我们相识的地方。还有朝思暮想的小龙虾~~</p>
-
-                </div>
+            <div class="col-md-3 gallery-grids">
+                <a href="images/g3.jpg" class="gallery-box" data-lightbox="example-set" data-title="">
+                    <img src="images/g3.jpg" alt="" class="img-fluid zoom-img">
+                </a>
+            </div>
+            <div class="col-md-3 gallery-grids">
+                <a href="images/g4.jpg" class="gallery-box" data-lightbox="example-set" data-title="">
+                    <img src="images/g4.jpg" alt="" class="img-fluid zoom-img">
+                </a>
+            </div>
+            <div class="col-md-3 gallery-grids">
+                <a href="images/g5.jpg" class="gallery-box" data-lightbox="example-set" data-title="">
+                    <img src="images/g5.jpg" alt="" class="img-fluid zoom-img">
+                </a>
+            </div>
+            <div class="col-md-3 gallery-grids">
+                <a href="images/g6.jpg" class="gallery-box" data-lightbox="example-set" data-title="">
+                    <img src="images/g6.jpg" alt="" class="img-fluid zoom-img">
+                </a>
+            </div>
+            <div class="col-md-3 gallery-grids">
+                <a href="images/g7.jpg" class="gallery-box" data-lightbox="example-set" data-title="">
+                    <img src="images/g7.jpg" alt="" class="img-fluid zoom-img">
+                </a>
+            </div>
+            <div class="col-md-3 gallery-grids">
+                <a href="images/g8.jpg" class="gallery-box" data-lightbox="example-set" data-title="">
+                    <img src="images/g8.jpg" alt="" class="img-fluid zoom-img">
+                </a>
+            </div>
+            <div class="col-md-3 gallery-grids">
+                <a href="images/hainan_sanya.jpg" class="gallery-box" data-lightbox="example-set" data-title="">
+                    <img src="images/hainan_sanya.jpg" alt="" class="img-fluid zoom-img">
+                </a>
+            </div>
+            <div class="col-md-3 gallery-grids">
+                <a href="images/g10.jpg" class="gallery-box" data-lightbox="example-set" data-title="">
+                    <img src="images/g10.jpg" alt="" class="img-fluid zoom-img">
+                </a>
+            </div>
+            <div class="col-md-3 gallery-grids">
+                <a href="images/g11.jpg" class="gallery-box" data-lightbox="example-set" data-title="">
+                    <img src="images/g11.jpg" alt="" class="img-fluid zoom-img">
+                </a>
+            </div>
+            <div class="col-md-3 gallery-grids">
+                <a href="images/g12.jpg" class="gallery-box" data-lightbox="example-set" data-title="">
+                    <img src="images/g12.jpg" alt="" class="img-fluid zoom-img">
+                </a>
             </div>
         </div>
+        <script src="js/lightbox-plus-jquery.min.js"></script>
     </div>
-</section>
-<!-- //promotions -->
+</div>
+<!--//gallery-->
 <!--footer -->
 <footer>
     <section class="footer footer_w3layouts_section_1its py-md-5">
@@ -153,7 +152,7 @@
                 </div>
                 <div class="col-lg-3 footer-grid_section_1its_w3">
                     <div class="footer-title">
-                        <h3>联系</h3>
+                        <h3>联系我</h3>
                     </div>
                     <div class="contact-info">
                         <h4>位置：</h4>
@@ -173,7 +172,7 @@
                         <li><a href="index.html">足记-记录生活</a></li>
                         <li><a href="gallery.html">博客-记录工作</a></li>
                         <li><a href="about.html">简历-记录我</a></li>
-                        <!--
+						<!--
                         <ul class="social_section_1info">
                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                             <li><a href="#"><i class="fab fa-twitter"></i></a></li>
@@ -204,57 +203,9 @@
 			
 		}());
 
-</script>
-<!--Start-slider-script-->
-<script defer src="js/jquery.flexslider.js"></script>
-<script type="text/javascript">
-		
-		$(window).load(function(){
-		  $('.flexslider').flexslider({
-			animation: "slide",
-			start: function(slider){
-			  $('body').removeClass('loading');
-			}
-		  });
-		});
 
 </script>
-<!--End-slider-script-->
-<!-- Calendar -->
-<script src="js/jquery-ui.js"></script>
-<script>
-		$(function () {
-			$("#datepicker,#datepicker1,#datepicker2,#datepicker3,#datepicker4,#datepicker5").datepicker();
-		});
 
-</script>
-<!-- //Calendar -->
-<!--Rersponsive tabs-->
-<script src="js/easy-responsive-tabs.js"></script>
-<script>
-		$(document).ready(function () {
-			$('#horizontalTab').easyResponsiveTabs({
-				type: 'default', //Types: default, vertical, accordion           
-				width: 'auto', //auto or any width like 600px
-				fit: true, // 100% fit in a container
-				closed: 'accordion', // Start closed if in accordion view
-				activate: function (event) { // Callback function if tab is switched
-					var $tab = $(this);
-					var $info = $('#tabInfo');
-					var $name = $('span', $info);
-					$name.text($tab.text());
-					$info.show();
-				}
-			});
-			$('#verticalTab').easyResponsiveTabs({
-				type: 'vertical',
-				width: 'auto',
-				fit: true
-			});
-		});
-
-</script>
-<!-- //Responsive tabs -->
 </body>
 <!-- //Body -->
 </html>
